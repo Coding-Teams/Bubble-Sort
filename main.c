@@ -14,13 +14,15 @@ int n = sizeof(a) / sizeof(a[0]);
 
 void bubbleSort(int arr[]){
 
-    for(i = 1; i < n; i++){
-        for(j = n - 1; j >= i; j--){
-
+    do{
+        int flag = 0;
+        for(i = 0; i < n -1; i++){
             if(arr[j - 1] > arr[j])
+                flag = 1;
                 swapp(arr);
         }
-    }
+        p = p -1;
+    }while(flag == 0);
 
     print(arr);
 }
